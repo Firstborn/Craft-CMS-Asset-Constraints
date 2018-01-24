@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6d18fb-c369-4d1c-b006-4c47bdc705b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Craft-CMS-Asset-Constraints.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assetconstraints/AssetConstraintsPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assetconstraints/resources/css/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assetconstraints/resources/icon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assetconstraints/resources/js/AssetConstraints.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assetconstraints/templates/settings.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,8 +53,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="54">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,6 +89,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -183,12 +173,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516819672844</updated>
-      <workItem from="1516819674572" duration="278000" />
+      <workItem from="1516819674572" duration="330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278000" />
+    <option name="totallyTimeSpent" value="330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="205" y="103" width="1893" height="1166" extended-state="0" />
@@ -272,8 +262,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
