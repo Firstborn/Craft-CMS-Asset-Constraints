@@ -33,7 +33,7 @@ class AssetConstraintsPlugin extends BasePlugin
       return array(
             'constraints' => array(AttributeType::Mixed, 'default' => array(
                 array(
-                    'extension' => '*',
+                    'type' => '*',
                     'source' => '*',
                     'maximum_size' => ''
                 )
