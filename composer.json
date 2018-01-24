@@ -1,5 +1,5 @@
 {
-    "name": "firstborn/asset-constraints",
+    "name": "firstborn/craft-cms-asset-constraints",
     "type": "library",
     "license": "MIT",
     "require": {}
