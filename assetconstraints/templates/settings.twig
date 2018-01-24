@@ -1,0 +1,54 @@
+{% import "_includes/forms" as forms %}
+
+{% set sourceOptions = [] %}
+{% set sourceOptions = sourceOptions|merge([{ label: 'All', value: '*' }]) %}
+{% for source in sources %}
+    {% set sourceOptions = sourceOptions|merge([{ label: source.name, value: source.id }]) %}
+{% endfor %}
+
+{% set extOptions = [] %}
+{% set extOptions = extOptions|merge([{ label: 'All', value: '*' }]) %}
+{% for ext in extensions %}
+    {% set extOptions = extOptions|merge([{ label: ext, value: ext }]) %}
+{% endfor %}
+
+<h2>Set asset constraints for folder & file type combinations.</h2>
+<p>As files are uploaded via the asset manager they will be checked against the constraints. If a constraint is not passed the upload will be rejected.</p>
+
+{{ forms.editableTableField({
+    label: 'Some setting',
+    instructions: 'Some instructions here',
+    id: 'constraints',
+    name: 'constraints',
+    cols: [
+    {
+        heading : 'Asset Source',
+        type: 'select',
+        options: sourceOptions
+    },
+    {
+        heading : 'Asset Type',
+        type: 'select',
+        options: extOptions
+    },
+    {
+        heading: 'Maximum Size (kb)',
+        type: 'singleine'
+    }
+    ],
+    rows: settings['constraints']
+}) }}
+
+
+{% includeCssResource "assetconstraints/css/styles.css" %}
+{% includeJsResource "assetconstraints/js/AssetConstraints.js" %}
+{% includejs %}
+new Craft.AssetConstraints();
+{% endincludejs %}
+
+
+
+
+
+
+
