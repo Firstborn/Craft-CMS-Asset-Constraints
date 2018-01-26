@@ -49,9 +49,12 @@ class AssetConstraintsPlugin extends BasePlugin
         foreach($settings['constraints'] as $constraint){
             $constraints[] = [$constraint['source'], $constraint['type'], $constraint['maximum_size']];
         }
+
+        $configConstraints = craft()->config->get('constraints', 'assetconstraints');
         $settings['constraints'] = $constraints;
         return craft()->templates->render('assetconstraints/settings', array(
             'settings' => $settings,
+            'config' => $configConstraints,
             'sources' => $sources,
             'extensions' => $extensions
         ));
@@ -75,8 +78,13 @@ class AssetConstraintsPlugin extends BasePlugin
     public function findConstraints($sourceId, $ext)
     {
         $settings = $this->getSettings();
+
+        $settingsConstraints = $settings['constraints'];
+        $configConstraints = craft()->config->get('constraints', 'assetconstraints');
+        $constraints = array_merge($configConstraints, $settingsConstraints);
+
         $matches = [];
-        foreach($settings['constraints'] as $constraint){
+        foreach($constraints as $constraint){
             if (($constraint['source'] == $sourceId || $constraint['source'] == '*') && ($constraint['type'] == $ext || $constraint['type'] == '*')){
                 AssetConstraintsPlugin::log('match ' . json_encode($constraint), LogLevel::Error);
                 $matches[] = $constraint;

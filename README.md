@@ -9,6 +9,9 @@ As files are uploaded via the asset manager they will be checked against the con
 ## Use
 Go into the Asset Constraints settings and add one or more constraints. Each constraint consists of a source folder, file type and maximum file size. Whenever a file is uploaded via the Asset panel it will be checked against constraints that match the destination folder. If the file fails a constraints test the upload will be rejected.
 
+## Configuration settings
+In addition to the locally set constraints that can be defined on the settings screen you can also use the `config.php` file to set constraints. To use the config file, copy the `config.php` file to a file called `assetconstraints.php` and move it to the `craft/config` directory. 
+
 #### Credits
 
 The entire dev team at [Firstborn](https://www.firstborn.com/)

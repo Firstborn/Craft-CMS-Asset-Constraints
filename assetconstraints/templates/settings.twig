@@ -15,8 +15,9 @@
 <h2>Set asset constraints for folder & file type combinations.</h2>
 <p>As files are uploaded via the asset manager they will be checked against the constraints. If a constraint is not passed the upload will be rejected.</p>
 
+
 {{ forms.editableTableField({
-    label: 'Upload Constraints',
+    label: 'Local settings',
     instructions: 'Set the constraints to be applied to files uploaded into the specified asset sources. Multiple constraints can be applied to a single upload if the asset source matches.',
     id: 'constraints',
     name: 'constraints',
@@ -39,6 +40,36 @@
     rows: settings['constraints']
 }) }}
 
+{% if config|length %}
+
+<div class="field">
+    <div class="heading">
+        <label id="settings-constraints-label" for="settings-constraints">Config settings</label>
+        <div class="instructions"><p>Constraints that have be set via a config file. These will be applied along with any locally set constraints.</p>
+        </div>
+    </div>
+    <div class="input ltr">
+        <table id="settings-constraints" class="shadow-box editable">
+            <thead>
+            <tr>
+                <th scope="col" class="header">Asset Source</th>
+                <th scope="col" class="header">Asset Type</th>
+                <th scope="col" class="header">Maximum Size (kb)</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for constraint in config %}
+            <tr >
+                <td class="">{{ constraint['source'] }}</td>
+                <td class=" ">{{ constraint['type'] }}</td>
+                <td class=" ">{{ constraint['maximum_size'] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
 
 {% includeCssResource "assetconstraints/css/styles.css" %}
 {% includeJsResource "assetconstraints/js/AssetConstraints.js" %}
