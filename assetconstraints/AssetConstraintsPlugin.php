@@ -38,9 +38,7 @@ class AssetConstraintsPlugin extends BasePlugin
                 )
          */
       return array(
-            'constraints' => array(AttributeType::Mixed, 'default' => array(
-
-            )),
+            'constraints' => array(AttributeType::Mixed, 'default' => []),
         );
     }
 
@@ -49,7 +47,7 @@ class AssetConstraintsPlugin extends BasePlugin
         $sources = craft()->assetSources->getAllSources();
         $extensions = IOHelper::getAllowedFileExtensions();
         $settings = $this->getSettings();
-        $constraints = [];
+
         foreach($settings['constraints'] as $constraint){
             $constraints[] = [$constraint['source'], $constraint['type'], $constraint['maximum_size']];
         }
