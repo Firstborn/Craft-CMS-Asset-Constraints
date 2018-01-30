@@ -30,13 +30,16 @@ class AssetConstraintsPlugin extends BasePlugin
 
     protected function defineSettings()
     {
-      return array(
-            'constraints' => array(AttributeType::Mixed, 'default' => array(
-                array(
+        /*
+         * array(
                     'type' => '*',
                     'source' => '*',
                     'maximum_size' => ''
                 )
+         */
+      return array(
+            'constraints' => array(AttributeType::Mixed, 'default' => array(
+
             )),
         );
     }
@@ -63,6 +66,7 @@ class AssetConstraintsPlugin extends BasePlugin
     public function prepSettings($settings)
     {
         $constraints = [];
+        if (isset($settings['constraints']) && is_array($settings['constraints']))
         foreach ($settings['constraints'] as $constraint){
             $constraints[] = [
                 'source' => $constraint[0],
